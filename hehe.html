@@ -1,0 +1,1810 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vertical Tampa CDC | Building Stronger Communities</title>
+    <meta
+      name="description"
+      content="Vertical Tampa CDC connects faith-based mission, development capacity, and mission-aligned partners to advance affordable housing and stronger communities."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&family=Didact+Gothic&family=Geist:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <style>
+      :root {
+        --charcoal: #2c2c2c;
+        --medium-gray: #6b6b6b;
+        --off-white: #f9f9f9;
+        --light-gray: #e8e8e8;
+        --warm-beige: #e9e3d8;
+        --stone-gray: #a8a8a8;
+        --black: var(--charcoal);
+        --black-soft: var(--medium-gray);
+        --white: var(--off-white);
+        --cream: var(--off-white);
+        --cream-2: var(--light-gray);
+        --muted: rgba(107, 107, 107, 0.74);
+        --muted-light: rgba(249, 249, 249, 0.66);
+        --line: rgba(168, 168, 168, 0.24);
+        --line-light: rgba(249, 249, 249, 0.16);
+        --accent: var(--warm-beige);
+        --secondary: var(--light-gray);
+        --brown: var(--stone-gray);
+        --body: "Geist", Arial, sans-serif;
+        --heading: "Didact Gothic", Arial, sans-serif;
+        --badge: "Anonymous Pro", monospace;
+        --radius: 6px;
+        --side: 2rem;
+        --container: 1200px;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 90px;
+      }
+
+      body {
+        background: var(--black);
+        color: var(--black);
+        font-family: var(--body);
+        font-size: 1rem;
+        font-feature-settings: "dlig" on;
+        font-variant-numeric: ordinal;
+        letter-spacing: 0;
+        line-height: 1.5;
+        min-height: 100%;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      body,
+      .page {
+        max-width: 100%;
+        overflow-x: hidden;
+      }
+
+      body.menu-open {
+        overflow: hidden;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button,
+      input,
+      select,
+      textarea {
+        font: inherit;
+      }
+
+      button,
+      a {
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      ::selection {
+        background: var(--accent);
+        color: var(--black);
+      }
+
+      .skip-link {
+        background: var(--accent);
+        border-radius: var(--radius);
+        color: var(--black);
+        font-weight: 700;
+        left: 1rem;
+        padding: 0.75rem 1rem;
+        position: fixed;
+        top: -5rem;
+        z-index: 1000;
+      }
+
+      .skip-link:focus {
+        top: 1rem;
+      }
+
+      .page {
+        background: var(--black);
+        margin: 0 auto;
+        max-width: 1460px;
+        padding: 1rem;
+        width: 100%;
+      }
+
+      .site-header {
+        left: 50%;
+        padding: 1rem var(--side) 0;
+        position: fixed;
+        top: 0;
+        transform: translateX(-50%);
+        width: min(100%, 1460px);
+        z-index: 50;
+      }
+
+      .nav-shell {
+        align-items: center;
+        background: rgba(44, 44, 44, 0.92);
+        border: 1px solid var(--line-light);
+        border-radius: var(--radius);
+        color: var(--white);
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 1fr auto 1fr;
+        min-height: 58px;
+        padding: 0.5rem;
+        backdrop-filter: blur(16px);
+      }
+
+      .brand {
+        align-items: center;
+        display: inline-flex;
+        gap: 0.6rem;
+        justify-self: start;
+        min-width: 0;
+      }
+
+      .brand-mark {
+        align-items: center;
+        border: 1px solid var(--line-light);
+        border-radius: var(--radius);
+        display: inline-grid;
+        font-family: var(--badge);
+        font-size: 0.8rem;
+        font-weight: 700;
+        height: 34px;
+        justify-content: center;
+        line-height: 1;
+        width: 34px;
+      }
+
+      .brand-copy {
+        display: grid;
+        gap: 0.08rem;
+      }
+
+      .brand-title {
+        font-size: 0.94rem;
+        font-weight: 700;
+        line-height: 1;
+      }
+
+      .brand-subtitle {
+        color: var(--muted-light);
+        font-size: 0.72rem;
+        line-height: 1.1;
+      }
+
+      .site-nav {
+        align-items: center;
+        display: flex;
+        gap: 1.6rem;
+        justify-content: center;
+      }
+
+      .site-nav a {
+        color: rgba(249, 249, 249, 0.86);
+        font-size: 0.78rem;
+        font-weight: 500;
+        line-height: 1;
+        transition: color 180ms ease;
+      }
+
+      .site-nav a:hover,
+      .site-nav a:focus-visible {
+        color: var(--accent);
+      }
+
+      .nav-actions {
+        align-items: center;
+        display: flex;
+        gap: 0.5rem;
+        justify-self: end;
+      }
+
+      .button {
+        align-items: center;
+        border: 0;
+        border-radius: var(--radius);
+        cursor: pointer;
+        display: inline-flex;
+        font-size: 0.9rem;
+        font-weight: 500;
+        gap: 0.55rem;
+        justify-content: center;
+        line-height: 1.5;
+        min-height: 42px;
+        padding: 0 1rem;
+        transition:
+          background-color 180ms ease,
+          color 180ms ease,
+          transform 180ms ease,
+          border-color 180ms ease;
+        white-space: nowrap;
+      }
+
+      .button:hover,
+      .button:focus-visible {
+        transform: translateY(-2px);
+      }
+
+      .button-primary {
+        background: var(--accent);
+        color: var(--black);
+      }
+
+      .button-primary:hover {
+        background: var(--white);
+      }
+
+      .button-secondary {
+        background: transparent;
+        border: 1px solid var(--line-light);
+        color: var(--white);
+      }
+
+      .button-secondary:hover {
+        background: var(--white);
+        color: var(--black);
+      }
+
+      .button-dark {
+        background: var(--black);
+        color: var(--white);
+      }
+
+      .button-dark:hover {
+        background: var(--accent);
+        color: var(--black);
+      }
+
+      .button-light {
+        background: var(--white);
+        color: var(--black);
+      }
+
+      .button-light:hover {
+        background: var(--accent);
+      }
+
+      .icon-dot {
+        align-items: center;
+        background: currentColor;
+        border-radius: 50%;
+        color: inherit;
+        display: inline-flex;
+        height: 5px;
+        justify-content: center;
+        width: 5px;
+      }
+
+      .menu-toggle {
+        display: none;
+      }
+
+      .hero {
+        background:
+          linear-gradient(90deg, rgba(44, 44, 44, 0.72), rgba(44, 44, 44, 0.18)),
+          url("https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1800&q=85")
+            center / cover;
+        border: 1px solid var(--line-light);
+        border-radius: var(--radius);
+        color: var(--white);
+        display: grid;
+        min-height: 760px;
+        overflow: hidden;
+        padding: 7rem var(--side) 2rem;
+        position: relative;
+      }
+
+      .hero::after {
+        background: linear-gradient(to top, rgba(44, 44, 44, 0.68), rgba(44, 44, 44, 0));
+        content: "";
+        inset: 0;
+        pointer-events: none;
+        position: absolute;
+      }
+
+      .hero-content {
+        align-self: end;
+        max-width: 690px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .brand,
+      .brand-copy,
+      .hero-content,
+      .hero-card,
+      .intro-inner,
+      .section-inner,
+      .copy-stack,
+      .section-head,
+      .case-copy,
+      .footer-grid > * {
+        min-width: 0;
+      }
+
+      .badge {
+        align-items: center;
+        color: inherit;
+        display: inline-flex;
+        font-family: var(--badge);
+        font-size: 0.85rem;
+        gap: 0.5rem;
+        line-height: 1.4;
+      }
+
+      .badge::before {
+        background: var(--accent);
+        border-radius: 50%;
+        content: "";
+        height: 5px;
+        width: 5px;
+      }
+
+      .badge.dark {
+        color: var(--black);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: var(--heading);
+        font-weight: 400;
+        letter-spacing: 0;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      p,
+      a,
+      button {
+        overflow-wrap: break-word;
+      }
+
+      h1 {
+        font-size: 3.5rem;
+        line-height: 1.1;
+        margin-top: 0.7rem;
+      }
+
+      h2 {
+        font-size: 2.5rem;
+        line-height: 1.15;
+      }
+
+      h3 {
+        font-size: 2rem;
+        line-height: 1.2;
+      }
+
+      h4 {
+        font-size: 1.5rem;
+        line-height: 1.3;
+      }
+
+      p {
+        color: var(--muted);
+      }
+
+      .hero p {
+        color: rgba(249, 249, 249, 0.72);
+        margin-top: 0.85rem;
+        max-width: 560px;
+      }
+
+      .hero-actions {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-top: 1.25rem;
+      }
+
+      .hero-card {
+        align-items: center;
+        background: rgba(44, 44, 44, 0.78);
+        border: 1px solid var(--line-light);
+        border-radius: var(--radius);
+        bottom: 2rem;
+        display: grid;
+        gap: 0.9rem;
+        grid-template-columns: 84px 1fr;
+        max-width: 370px;
+        padding: 0.75rem;
+        position: absolute;
+        right: var(--side);
+        z-index: 1;
+        backdrop-filter: blur(14px);
+      }
+
+      .hero-card img {
+        aspect-ratio: 1;
+        border-radius: var(--radius);
+        height: 84px;
+        object-fit: cover;
+        width: 84px;
+      }
+
+      .hero-card p {
+        color: rgba(249, 249, 249, 0.72);
+        font-size: 0.84rem;
+        margin: 0.25rem 0 0;
+      }
+
+      .intro {
+        color: var(--white);
+        padding: 4.5rem var(--side);
+        text-align: center;
+      }
+
+      .intro-inner {
+        margin: 0 auto;
+        max-width: 760px;
+      }
+
+      .intro h2 {
+        font-size: 2rem;
+        line-height: 1.2;
+      }
+
+      .reviews {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem 0.7rem;
+        justify-content: center;
+        margin-top: 1.1rem;
+      }
+
+      .avatars {
+        display: flex;
+      }
+
+      .avatars img {
+        border: 2px solid var(--black);
+        border-radius: 50%;
+        height: 28px;
+        margin-left: -8px;
+        object-fit: cover;
+        width: 28px;
+      }
+
+      .avatars img:first-child {
+        margin-left: 0;
+      }
+
+      .stars {
+        color: var(--accent);
+        display: flex;
+        font-size: 0.75rem;
+        gap: 0.12rem;
+      }
+
+      .reviews span {
+        color: rgba(249, 249, 249, 0.75);
+        font-size: 0.82rem;
+      }
+
+      .logo-strip {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: center;
+        margin: 2rem auto 0;
+        max-width: 850px;
+      }
+
+      .logo-strip span {
+        align-items: center;
+        color: rgba(249, 249, 249, 0.68);
+        display: inline-flex;
+        font-size: 0.78rem;
+        font-weight: 600;
+        gap: 0.5rem;
+      }
+
+      .surface {
+        background: var(--cream);
+        border-radius: var(--radius);
+        overflow: hidden;
+      }
+
+      .section {
+        padding: 6rem var(--side);
+      }
+
+      .section + .section {
+        border-top: 1px solid var(--line);
+      }
+
+      .section-inner {
+        margin: 0 auto;
+        max-width: var(--container);
+      }
+
+      .section-head {
+        display: grid;
+        gap: 0.8rem;
+        margin-bottom: 2rem;
+        max-width: 720px;
+      }
+
+      .section-head.center {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+      }
+
+      .split {
+        align-items: center;
+        display: grid;
+        gap: 3rem;
+        grid-template-columns: 0.92fr 1fr;
+      }
+
+      .media-card {
+        border-radius: var(--radius);
+        min-height: 430px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .media-card img {
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        width: 100%;
+      }
+
+      .media-tags {
+        bottom: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.35rem;
+        left: 1rem;
+        position: absolute;
+        right: 1rem;
+        z-index: 1;
+      }
+
+      .tag {
+        background: rgba(44, 44, 44, 0.72);
+        border-radius: var(--radius);
+        color: var(--white);
+        font-family: var(--badge);
+        font-size: 0.78rem;
+        line-height: 1.4;
+        padding: 0.35rem 0.55rem;
+      }
+
+      .copy-stack {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .check-list {
+        display: grid;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+      }
+
+      .check-item {
+        align-items: center;
+        background: var(--cream-2);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        display: flex;
+        gap: 0.75rem;
+        padding: 0.85rem;
+      }
+
+      .check-item i {
+        align-items: center;
+        background: var(--accent);
+        border-radius: var(--radius);
+        color: var(--black);
+        display: inline-grid;
+        flex: 0 0 auto;
+        height: 28px;
+        justify-content: center;
+        width: 28px;
+      }
+
+      .metrics-band {
+        background: var(--secondary);
+      }
+
+      .metrics-grid {
+        display: grid;
+        gap: 1px;
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .metric-card {
+        background: rgba(249, 249, 249, 0.62);
+        border: 1px solid rgba(168, 168, 168, 0.18);
+        border-radius: var(--radius);
+        display: grid;
+        gap: 1.1rem;
+        min-height: 170px;
+        padding: 1.25rem;
+      }
+
+      .metric-card i {
+        align-items: center;
+        background: var(--accent);
+        border-radius: var(--radius);
+        display: inline-grid;
+        height: 32px;
+        justify-content: center;
+        width: 32px;
+      }
+
+      .metric-number {
+        display: block;
+        font-family: var(--heading);
+        font-size: 2rem;
+        line-height: 1;
+      }
+
+      .service-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .service-card {
+        background: var(--white);
+        border: 1px solid var(--line);
+        display: grid;
+        gap: 1rem;
+        min-height: 330px;
+        padding: 1.2rem;
+      }
+
+      .service-card h3 {
+        font-size: 1.5rem;
+      }
+
+      .service-card ul {
+        color: var(--muted);
+        display: grid;
+        font-size: 0.9rem;
+        gap: 0.45rem;
+        list-style: none;
+        margin-top: 0.25rem;
+      }
+
+      .service-card li {
+        align-items: center;
+        display: flex;
+        gap: 0.45rem;
+      }
+
+      .service-card li::before {
+        background: var(--accent);
+        border-radius: 50%;
+        content: "";
+        height: 5px;
+        width: 5px;
+      }
+
+      .service-image {
+        background:
+          linear-gradient(to top, rgba(44, 44, 44, 0.78), rgba(44, 44, 44, 0.14)),
+          url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=900&q=85")
+            center / cover;
+        color: var(--white);
+      }
+
+      .service-image p {
+        color: rgba(249, 249, 249, 0.76);
+      }
+
+      .problem-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .capacity-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .capacity-grid .service-card {
+        min-height: 420px;
+      }
+
+      .section-note {
+        background: var(--accent);
+        border-radius: var(--radius);
+        color: var(--black);
+        margin-top: 1rem;
+        padding: 1.25rem;
+      }
+
+      .section-note p {
+        color: rgba(44, 44, 44, 0.82);
+        font-family: var(--heading);
+        font-size: clamp(1.25rem, 2vw, 1.7rem);
+        line-height: 1.2;
+      }
+
+      .leader-grid {
+        display: grid;
+        gap: 0.75rem;
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .leader-card {
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        overflow: hidden;
+      }
+
+      .leader-card img {
+        aspect-ratio: 1.08 / 1;
+        object-fit: cover;
+        width: 100%;
+      }
+
+      .leader-body {
+        display: grid;
+        gap: 0.65rem;
+        padding: 1.15rem;
+      }
+
+      .leader-body strong {
+        font-family: var(--heading);
+        font-size: 1.45rem;
+        font-weight: 400;
+        line-height: 1.1;
+      }
+
+      .leader-role {
+        color: var(--medium-gray);
+        font-family: var(--badge);
+        font-size: 0.85rem;
+      }
+
+      .contact-list {
+        display: grid;
+        gap: 0.75rem;
+        margin-top: 1rem;
+      }
+
+      .contact-line {
+        background: var(--cream-2);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 0.9rem;
+      }
+
+      .contact-line strong {
+        display: block;
+        font-size: 0.82rem;
+        margin-bottom: 0.25rem;
+      }
+
+      .case-band {
+        background: var(--black);
+        padding: 6rem var(--side);
+      }
+
+      .case-grid {
+        display: grid;
+        gap: 0.5rem;
+        grid-template-columns: 1fr 1fr;
+        margin: 0 auto;
+        max-width: var(--container);
+      }
+
+      .case-copy,
+      .case-photo {
+        border-radius: var(--radius);
+        min-height: 520px;
+        overflow: hidden;
+      }
+
+      .case-copy {
+        background: var(--cream);
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        padding: 1.5rem;
+      }
+
+      .case-copy .brand-small {
+        align-items: center;
+        display: inline-flex;
+        font-size: 0.82rem;
+        font-weight: 700;
+        gap: 0.45rem;
+      }
+
+      .case-items {
+        align-self: end;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 2rem;
+      }
+
+      .case-item {
+        background: var(--white);
+        border: 1px solid var(--line);
+        min-height: 140px;
+        padding: 1rem;
+      }
+
+      .case-item i {
+        align-items: center;
+        background: var(--accent);
+        border-radius: var(--radius);
+        display: inline-grid;
+        height: 28px;
+        justify-content: center;
+        margin-bottom: 1.2rem;
+        width: 28px;
+      }
+
+      .result-strip {
+        align-items: end;
+        background: var(--accent);
+        display: flex;
+        gap: 1rem;
+        justify-content: space-between;
+        margin: 1rem -1.5rem -1.5rem;
+        padding: 1rem 1.5rem;
+      }
+
+      .result-strip strong {
+        display: block;
+        font-family: var(--heading);
+        font-size: 2.5rem;
+        font-weight: 400;
+        line-height: 1;
+      }
+
+      .case-photo {
+        position: relative;
+      }
+
+      .case-photo img {
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+      }
+
+      .insights-grid {
+        display: grid;
+        gap: 0.75rem;
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .insight-card {
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        display: grid;
+        gap: 2rem;
+        min-height: 260px;
+        padding: 1.25rem;
+      }
+
+      .insight-card.featured {
+        background: var(--accent);
+      }
+
+      .insight-card.image {
+        background:
+          linear-gradient(to top, rgba(44, 44, 44, 0.78), rgba(44, 44, 44, 0.1)),
+          url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=85")
+            center / cover;
+        color: var(--white);
+      }
+
+      .insight-card.image p {
+        color: rgba(249, 249, 249, 0.72);
+      }
+
+      .faq-grid {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 0.72fr 1fr;
+      }
+
+      .faq-list {
+        display: grid;
+        gap: 0.6rem;
+      }
+
+      .faq-card {
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        overflow: hidden;
+      }
+
+      .faq-question {
+        align-items: center;
+        background: transparent;
+        border: 0;
+        color: var(--black);
+        cursor: pointer;
+        display: flex;
+        font-weight: 600;
+        gap: 1rem;
+        justify-content: space-between;
+        padding: 1rem;
+        text-align: left;
+        width: 100%;
+      }
+
+      .faq-answer {
+        color: var(--muted);
+        display: none;
+        padding: 0 1rem 1rem;
+      }
+
+      .faq-card.is-open .faq-answer {
+        display: block;
+      }
+
+      .contact-form {
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        display: grid;
+        gap: 0.75rem;
+        padding: 1rem;
+      }
+
+      .form-row {
+        display: grid;
+        gap: 0.75rem;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      input,
+      select,
+      textarea {
+        background: var(--cream);
+        border: 1px solid transparent;
+        border-radius: var(--radius);
+        color: var(--black);
+        min-height: 52px;
+        padding: 0.9rem 1rem;
+        width: 100%;
+      }
+
+      textarea {
+        min-height: 140px;
+        resize: vertical;
+      }
+
+      input:focus,
+      select:focus,
+      textarea:focus {
+        border-color: var(--accent);
+        outline: 0;
+      }
+
+      .cta {
+        background:
+          linear-gradient(90deg, rgba(44, 44, 44, 0.76), rgba(44, 44, 44, 0.2)),
+          url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1600&q=85")
+            center / cover;
+        border-radius: var(--radius);
+        color: var(--white);
+        margin-top: 1rem;
+        min-height: 470px;
+        padding: 5rem var(--side);
+      }
+
+      .cta-inner {
+        max-width: 620px;
+      }
+
+      .cta p {
+        color: rgba(249, 249, 249, 0.76);
+        margin: 1rem 0 1.4rem;
+      }
+
+      .footer {
+        color: var(--white);
+        padding: 4rem var(--side) 2rem;
+      }
+
+      .footer-grid {
+        display: grid;
+        gap: 3rem;
+        grid-template-columns: 1.2fr repeat(3, 0.7fr);
+        margin: 0 auto;
+        max-width: var(--container);
+      }
+
+      .footer h2 {
+        font-size: 2rem;
+      }
+
+      .footer p,
+      .footer a,
+      .footer li {
+        color: rgba(249, 249, 249, 0.66);
+      }
+
+      .footer ul {
+        display: grid;
+        gap: 0.45rem;
+        list-style: none;
+        margin-top: 0.9rem;
+      }
+
+      .footer h4 {
+        font-family: var(--body);
+        font-size: 0.95rem;
+        font-weight: 600;
+      }
+
+      .socials {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 1.2rem;
+      }
+
+      .socials a {
+        align-items: center;
+        border: 1px solid var(--line-light);
+        border-radius: var(--radius);
+        display: inline-grid;
+        height: 36px;
+        justify-content: center;
+        width: 36px;
+      }
+
+      .footer-bottom {
+        border-top: 1px solid var(--line-light);
+        display: flex;
+        gap: 1rem;
+        justify-content: space-between;
+        margin: 3rem auto 0;
+        max-width: var(--container);
+        padding-top: 1rem;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(22px);
+        transition:
+          opacity 600ms ease,
+          transform 600ms ease;
+      }
+
+      .reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (max-width: 1080px) {
+        :root {
+          --side: 1.25rem;
+        }
+
+        .nav-shell {
+          grid-template-columns: 1fr auto;
+        }
+
+        .site-nav {
+          background: rgba(44, 44, 44, 0.98);
+          border: 1px solid var(--line-light);
+          border-radius: var(--radius);
+          display: none;
+          flex-direction: column;
+          grid-column: 1 / -1;
+          padding: 1rem;
+        }
+
+        .site-nav.is-open {
+          display: flex;
+        }
+
+        .nav-actions {
+          display: none;
+        }
+
+        .menu-toggle {
+          display: inline-flex;
+        }
+
+        .hero-card {
+          bottom: 1rem;
+          left: var(--side);
+          right: var(--side);
+        }
+
+        .hero-content {
+          padding-bottom: 8.5rem;
+        }
+
+        .split,
+        .case-grid,
+        .faq-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .metrics-grid,
+        .service-grid,
+        .capacity-grid,
+        .leader-grid,
+        .insights-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .footer-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 760px) {
+        .page {
+          padding: 0.5rem;
+        }
+
+        .site-header {
+          padding: 0.5rem 0.5rem 0;
+        }
+
+        .brand-subtitle {
+          display: none;
+        }
+
+        .brand-title {
+          display: block;
+          max-width: 190px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        h1 {
+          font-size: 2.8rem;
+        }
+
+        h2 {
+          font-size: 1.875rem;
+        }
+
+        h3 {
+          font-size: 1.5rem;
+        }
+
+        .hero {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          min-height: 720px;
+          padding-top: 6rem;
+        }
+
+        .hero-content {
+          max-width: 100%;
+          padding-bottom: 0;
+          width: 100%;
+        }
+
+        .hero-content,
+        .intro-inner,
+        .section-inner,
+        .cta-inner,
+        .footer-grid,
+        .footer-bottom {
+          margin-left: auto;
+          margin-right: auto;
+          max-width: calc(100vw - 3rem);
+          width: calc(100vw - 3rem);
+        }
+
+        .hero-actions {
+          align-items: stretch;
+          flex-direction: column;
+          max-width: calc(100vw - 3rem);
+          width: 100%;
+        }
+
+        .hero-actions .button {
+          white-space: normal;
+          width: 100%;
+        }
+
+        .hero-card {
+          bottom: auto;
+          grid-template-columns: 72px minmax(0, 1fr);
+          left: auto;
+          margin-top: 1rem;
+          max-width: 100%;
+          position: relative;
+          right: auto;
+          width: calc(100vw - 3rem);
+        }
+
+        .hero-card img {
+          height: 72px;
+          width: 72px;
+        }
+
+        .intro,
+        .section,
+        .case-band,
+        .cta,
+        .footer {
+          padding-left: 1rem;
+          padding-right: 1rem;
+        }
+
+        .section,
+        .case-band {
+          padding-bottom: 4.5rem;
+          padding-top: 4.5rem;
+        }
+
+        .metrics-grid,
+        .service-grid,
+        .capacity-grid,
+        .leader-grid,
+        .insights-grid,
+        .form-row,
+        .case-items,
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .media-card,
+        .case-copy,
+        .case-photo {
+          min-height: 360px;
+        }
+
+        .footer-bottom {
+          flex-direction: column;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          scroll-behavior: auto !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="page">
+      <header class="site-header">
+        <div class="nav-shell">
+          <a class="brand" href="#top" aria-label="Vertical Tampa CDC Home">
+            <span class="brand-mark">VT</span>
+            <span class="brand-copy">
+              <span class="brand-title">Vertical Tampa CDC</span>
+              <span class="brand-subtitle">Part of Vertical Tampa</span>
+            </span>
+          </a>
+
+          <nav class="site-nav" id="site-nav" aria-label="Main Navigation" data-menu>
+            <a href="#top">Overview</a>
+            <a href="#about">Who We Are</a>
+            <a href="#problem">The Problem</a>
+            <a href="#capacity">Capacity</a>
+            <a href="#leadership">Leadership</a>
+            <a href="#contact">Contact</a>
+          </nav>
+
+          <div class="nav-actions">
+            <a class="button button-secondary" href="partner-with-us.html">Partner With Us</a>
+            <a class="button button-primary" href="contact.html">Contact Us</a>
+          </div>
+
+          <button
+            class="button button-secondary menu-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="site-nav"
+            data-menu-toggle
+          >
+            <i class="fa-solid fa-bars"></i>
+            Menu
+          </button>
+        </div>
+      </header>
+
+      <main id="main">
+        <section class="hero" id="top">
+          <div class="hero-content reveal">
+            <span class="badge">Vertical Tampa Community Development Corporation</span>
+            <h1>Building Homes. Restoring Hope. Transforming Communities Nationwide.</h1>
+            <p>
+              Vertical Tampa CDC connects faith-based mission, practical development capacity,
+              and mission-aligned partners to move affordable housing from community need to
+              build-ready execution.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="partner-with-us.html">Partner With Us</a>
+              <a class="button button-secondary" href="#capacity">View Capacity</a>
+            </div>
+          </div>
+
+          <div class="hero-card reveal">
+            <img
+              src="https://images.unsplash.com/photo-1758957851828-5179f0e06985?auto=format&fit=crop&w=300&q=85"
+              alt="Children playing outside a modern residential community"
+            />
+            <div>
+              <span class="badge">Mission-led development</span>
+              <p>
+                Stable homes, stronger families, and development that serves people first.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="intro reveal" id="about">
+          <div class="intro-inner">
+            <span class="badge">Mission Statement</span>
+            <h2>
+              We strengthen communities and improve quality of life by advancing affordable
+              housing, economic mobility, workforce development, educational opportunity,
+              community revitalization, and strategic partnerships.
+            </h2>
+            <div class="logo-strip">
+              <span><i class="fa-solid fa-house-chimney"></i> Affordable Housing</span>
+              <span><i class="fa-solid fa-briefcase"></i> Workforce Development</span>
+              <span><i class="fa-solid fa-chart-line"></i> Economic Mobility</span>
+              <span><i class="fa-solid fa-seedling"></i> Revitalization</span>
+              <span><i class="fa-solid fa-handshake-angle"></i> Strategic Partnerships</span>
+            </div>
+          </div>
+        </section>
+
+        <div class="surface">
+          <section class="section reveal">
+            <div class="section-inner split">
+              <div class="media-card">
+                <img
+                  src="https://images.unsplash.com/photo-1758957851828-5179f0e06985?auto=format&fit=crop&w=1000&q=85"
+                  alt="Families outside a modern residential community"
+                />
+                <div class="media-tags">
+                  <span class="tag">Mission-led</span>
+                  <span class="tag">Tampa Bay roots</span>
+                  <span class="tag">People-first outcomes</span>
+                </div>
+              </div>
+
+              <div class="copy-stack">
+                <span class="badge dark">Who We Are</span>
+                <h2>Vertical Tampa CDC</h2>
+                <p>
+                  Vertical Tampa CDC is a mission-driven, faith-based nonprofit created to help
+                  families move from housing insecurity toward durable opportunity.
+                </p>
+                <p>
+                  Rooted in Tampa Bay and designed for broader impact, we focus on affordable
+                  housing, economic mobility, workforce pathways, and neighborhood
+                  revitalization. We are not chasing a concept. We are building a repeatable
+                  model for stronger communities.
+                </p>
+                <div class="check-list">
+                  <div class="check-item">
+                    <i class="fa-solid fa-check"></i>
+                    Mission-led development aligned with practical housing strategy
+                  </div>
+                  <div class="check-item">
+                    <i class="fa-solid fa-check"></i>
+                    Tampa Bay foundation designed for replication and trusted partnerships
+                  </div>
+                  <div class="check-item">
+                    <i class="fa-solid fa-check"></i>
+                    People-first outcomes measured through stable homes and stronger families
+                  </div>
+                </div>
+                <a class="button button-dark" href="#problem">See The Problem</a>
+              </div>
+            </div>
+          </section>
+
+          <section class="section metrics-band reveal" id="problem">
+            <div class="section-inner">
+              <div class="section-head center">
+                <span class="badge dark">The Problem</span>
+                <h2>Across the United States, communities are facing a growing housing crisis</h2>
+                <p>
+                  The crisis continues to impact working families, essential workers, and
+                  underserved populations, creating ripple effects in economic stability,
+                  education, workforce participation, and quality of life.
+                </p>
+              </div>
+              <div class="metrics-grid">
+                <article class="metric-card">
+                  <i class="fa-solid fa-house-chimney-crack"></i>
+                  <div>
+                    <h4>Housing Affordability Crisis</h4>
+                    <p>Working families nationwide are struggling to find housing that aligns with their income.</p>
+                  </div>
+                </article>
+                <article class="metric-card">
+                  <i class="fa-solid fa-arrow-trend-up"></i>
+                  <div>
+                    <h4>Rising Costs vs. Stagnant Wages</h4>
+                    <p>Housing prices and rental rates continue to increase faster than income growth.</p>
+                  </div>
+                </article>
+                <article class="metric-card">
+                  <i class="fa-solid fa-people-roof"></i>
+                  <div>
+                    <h4>Limited Attainable Housing Supply</h4>
+                    <p>There is a significant shortage of housing designed for everyday working individuals and families.</p>
+                  </div>
+                </article>
+              </div>
+              <div class="section-note">
+                <p>
+                  Mission only matters when it becomes buildable. Vertical Tampa CDC is structured
+                  to move from community need to financing, compliance, design, construction, and
+                  repeatable housing models partners can help deliver.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section class="section reveal" id="capacity">
+            <div class="section-inner">
+              <div class="section-head center">
+                <span class="badge dark">Development Capacity</span>
+                <h2>From mission to build-ready housing</h2>
+                <p>
+                  Vertical Tampa CDC turns community need into build-ready execution through
+                  financing strategy, compliance, design, pricing, and delivery capacity.
+                </p>
+              </div>
+
+              <div class="service-grid capacity-grid">
+                <article class="service-card">
+                  <span class="badge dark">Execution Engine</span>
+                  <h3>Development Capacity</h3>
+                  <p>
+                    A full in-house development ecosystem to move housing ideas from need,
+                    to numbers, to plans, to build-ready execution.
+                  </p>
+                  <ul>
+                    <li>Lending &amp; Capital Structuring</li>
+                    <li>Legal &amp; Compliance Support</li>
+                    <li>Architectural Design</li>
+                    <li>General Contracting</li>
+                    <li>Pre-priced Plan Models for Efficient Development</li>
+                  </ul>
+                </article>
+
+                <article class="service-card">
+                  <span class="badge dark">Investor Advantage</span>
+                  <h3>Opportunity Zone Investor Advantage</h3>
+                  <p>
+                    Once projects are buildable, Opportunity Zones can connect financial tools
+                    with measurable community impact.
+                  </p>
+                  <ul>
+                    <li>Strategically target Opportunity Zones to maximize investment impact</li>
+                    <li>Potential tax deferrals and reductions for mission-aligned investors</li>
+                    <li>Incentivized long-term community investment and neighborhood stability</li>
+                    <li>Alignment between financial returns, social impact, and scalable housing delivery</li>
+                  </ul>
+                </article>
+
+                <article class="service-card service-image">
+                  <span class="badge">Ready to build</span>
+                  <h3>We know what we can build. We know what it costs. We are ready to build it.</h3>
+                  <p>
+                    A stronger path for partners who want returns tied to real community outcomes.
+                  </p>
+                  <a class="button button-light" href="partner-with-us.html">Partner With Us</a>
+                </article>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <section class="case-band reveal" id="leadership">
+          <div class="case-grid">
+            <article class="case-copy">
+              <div class="brand-small">
+                <i class="fa-solid fa-user-shield"></i>
+                Vertical Tampa CDC
+              </div>
+              <div>
+                <span class="badge dark">Leadership & Board</span>
+                <h2>The people behind the work</h2>
+                <p>
+                  The mission is carried by leaders who understand community service, real
+                  estate development, legal advocacy, and affordable housing construction.
+                </p>
+              </div>
+              <div>
+                <div class="case-items">
+                  <div class="case-item">
+                    <i class="fa-solid fa-cross"></i>
+                    <strong>Mission Vision</strong>
+                    <p>Faith-led service with strategic partnership experience.</p>
+                  </div>
+                  <div class="case-item">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                    <strong>Legal & Build Oversight</strong>
+                    <p>Real estate law, compliance, and construction capability.</p>
+                  </div>
+                </div>
+                <div class="result-strip">
+                  <div>
+                    <span>Focus</span>
+                    <strong>3</strong>
+                    <p>Leadership disciplines aligned around mission, law, and development.</p>
+                  </div>
+                  <a class="button button-dark" href="#contact">Contact Us</a>
+                </div>
+              </div>
+            </article>
+
+            <div class="case-photo">
+              <img
+                src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1100&q=85"
+                alt="Architectural planning documents for housing development"
+              />
+            </div>
+          </div>
+        </section>
+
+        <div class="surface">
+          <section class="section reveal">
+            <div class="section-inner">
+              <div class="section-head center">
+                <span class="badge dark">Board Profiles</span>
+                <h2>Experienced leadership across ministry, law, and construction</h2>
+              </div>
+              <div class="leader-grid">
+                <article class="leader-card">
+                  <img src="images/vertical-tampa/jd-bellamy.webp" alt="JD Bellamy" />
+                  <div class="leader-body">
+                    <strong>JD Bellamy</strong>
+                    <span class="leader-role">President</span>
+                    <p>
+                      Faith leader and vision-driven entrepreneur with over 10 years of
+                      residential and commercial real estate development experience.
+                    </p>
+                  </div>
+                </article>
+                <article class="leader-card">
+                  <img src="GIllen.png" alt="Glenna St-Fort" />
+                  <div class="leader-body">
+                    <strong>Glenna St-Fort</strong>
+                    <span class="leader-role">Board Member</span>
+                    <p>
+                      Licensed Real Estate Attorney with passion for community impact and
+                      equitable housing advocacy.
+                    </p>
+                  </div>
+                </article>
+                <article class="leader-card">
+                  <img src="frank.png" alt="Frank Kendrick" />
+                  <div class="leader-body">
+                    <strong>Frank Kendrick</strong>
+                    <span class="leader-role">Board Member</span>
+                    <p>
+                      Licensed General Contractor with over 30 years of residential and
+                      commercial development experience.
+                    </p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <section class="section reveal" id="contact">
+            <div class="section-inner split">
+              <div class="copy-stack">
+                <span class="badge dark">Get Started</span>
+                <h2>Partner with Vertical Tampa CDC.</h2>
+                <p>
+                  If you have land, capital, development alignment, or a community partnership
+                  that can help build stronger neighborhoods, partner with us to move practical
+                  housing solutions toward build-ready execution.
+                </p>
+                <div class="hero-actions">
+                  <a class="button button-dark" href="partner-with-us.html">Partner With Us</a>
+                  <a class="button button-light" href="contact.html">Contact Us</a>
+                </div>
+              </div>
+              <div class="contact-list">
+                <div class="contact-line">
+                  <strong>Address</strong>
+                  <p>4414 N Grady Ave, Tampa, FL 33614, United States</p>
+                </div>
+                <div class="contact-line">
+                  <strong>Phone</strong>
+                  <p><a href="tel:+18637979527">+1 863 797 9527</a></p>
+                </div>
+                <div class="contact-line">
+                  <strong>Email</strong>
+                  <p><a href="mailto:jdbellamy@verticaltampa.org">jdbellamy@verticaltampa.org</a></p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <section class="cta reveal">
+          <div class="cta-inner">
+            <span class="badge">Partner With Us</span>
+            <h2>Stable homes. Stronger families. Build-ready community impact.</h2>
+            <p>
+              Explore partnership pathways for land, capital, development collaboration,
+              and community alliances.
+            </p>
+            <a class="button button-light" href="partner-with-us.html">Partner With Us</a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-grid">
+          <div>
+            <h2>Vertical Tampa CDC</h2>
+            <p>
+              A mission-driven, faith-based nonprofit advancing affordable housing,
+              economic mobility, workforce pathways, and build-ready community development.
+            </p>
+            <div class="socials" aria-label="Social links">
+              <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+
+          <div>
+            <h4>Main Page</h4>
+            <ul>
+              <li><a href="#top">Overview</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#problem">The Problem</a></li>
+              <li><a href="#capacity">Capacity</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4>Other Page</h4>
+            <ul>
+              <li><a href="#leadership">Leadership</a></li>
+              <li><a href="partner-with-us.html">Partner With Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="#contact">Get Started</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4>Contact Info</h4>
+            <ul>
+              <li>4414 N Grady Ave, Tampa, FL 33614</li>
+              <li><a href="tel:+18637979527">+1 863 797 9527</a></li>
+              <li><a href="mailto:jdbellamy@verticaltampa.org">jdbellamy@verticaltampa.org</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 Vertical Tampa CDC. All Rights Reserved.</p>
+          <p>Part of Vertical Tampa.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      const menuToggle = document.querySelector("[data-menu-toggle]");
+      const menu = document.querySelector("[data-menu]");
+      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      function closeMenu() {
+        if (!menu || !menuToggle) return;
+        document.body.classList.remove("menu-open");
+        menu.classList.remove("is-open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.querySelector("i").className = "fa-solid fa-bars";
+      }
+
+      if (menuToggle && menu) {
+        menuToggle.addEventListener("click", () => {
+          const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+          document.body.classList.toggle("menu-open", !isOpen);
+          menu.classList.toggle("is-open", !isOpen);
+          menuToggle.setAttribute("aria-expanded", String(!isOpen));
+          menuToggle.querySelector("i").className = isOpen
+            ? "fa-solid fa-bars"
+            : "fa-solid fa-xmark";
+        });
+
+        menu.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", closeMenu);
+        });
+
+        window.addEventListener("resize", () => {
+          if (window.innerWidth > 1080) closeMenu();
+        });
+      }
+
+      const revealItems = document.querySelectorAll(".reveal");
+
+      if (reducedMotion || !("IntersectionObserver" in window)) {
+        revealItems.forEach((item) => item.classList.add("is-visible"));
+      } else {
+        const revealObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            });
+          },
+          { threshold: 0.14, rootMargin: "0px 0px -40px" },
+        );
+
+        revealItems.forEach((item) => revealObserver.observe(item));
+      }
+
+      document.querySelectorAll(".faq-question").forEach((button) => {
+        button.addEventListener("click", () => {
+          button.closest(".faq-card").classList.toggle("is-open");
+        });
+      });
+
+      const contactForm = document.querySelector("[data-contact-form]");
+
+      if (contactForm) {
+        contactForm.addEventListener("submit", (event) => {
+          event.preventDefault();
+          alert("Thank you! Your inquiry was received successfully by Vertical Tampa CDC.");
+          event.currentTarget.reset();
+        });
+      }
+    </script>
+  </body>
+</html>

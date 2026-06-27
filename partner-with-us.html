@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Partner With Us | Vertical Tampa CDC</title>
+    <meta
+      name="description"
+      content="Partner with Vertical Tampa Community Development Corporation through land partnerships, capital partnerships, development collaborations, and community alliances."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Inter+Tight:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --black: #2c2c2c;
+        --paper: #f9f9f9;
+        --muted: #6b6b6b;
+        --faint: #a8a8a8;
+        --line: rgba(44, 44, 44, 0.14);
+        --line-light: rgba(249, 249, 249, 0.16);
+        --warm: #e9e3d8;
+        --display: "Inter Tight", "Arial Narrow", Arial, sans-serif;
+        --body: "Geist", Arial, sans-serif;
+        --side: clamp(20px, 4vw, 54px);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        background: var(--black);
+      }
+
+      body {
+        background: var(--black);
+        color: var(--paper);
+        font-family: var(--body);
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.35;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page-shell {
+        margin: 0 auto;
+        max-width: 1680px;
+        min-height: 100vh;
+        overflow: hidden;
+      }
+
+      .site-header {
+        align-items: center;
+        color: var(--paper);
+        display: flex;
+        justify-content: space-between;
+        left: 0;
+        padding: 28px var(--side);
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 3;
+      }
+
+      .logo-brand img {
+        display: block;
+        height: 42px;
+        object-fit: contain;
+        width: auto;
+      }
+
+      .header-links {
+        align-items: center;
+        display: flex;
+        gap: 20px;
+        font-size: 10px;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      .partner-hero {
+        min-height: 100svh;
+        overflow: hidden;
+        padding: 150px var(--side) 72px;
+        position: relative;
+      }
+
+      .partner-hero::before {
+        background:
+          linear-gradient(90deg, rgba(44, 44, 44, 0.92), rgba(44, 44, 44, 0.58) 52%, rgba(44, 44, 44, 0.84)),
+          linear-gradient(180deg, rgba(44, 44, 44, 0.18), rgba(44, 44, 44, 0.76)),
+          url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2200&q=84")
+            center / cover;
+        content: "";
+        inset: 0;
+        position: absolute;
+      }
+
+      .partner-hero::after {
+        background-image:
+          linear-gradient(rgba(249, 249, 249, 0.09) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(249, 249, 249, 0.08) 1px, transparent 1px);
+        background-size: 160px 160px;
+        content: "";
+        inset: 0;
+        pointer-events: none;
+        position: absolute;
+      }
+
+      .partner-inner {
+        align-items: end;
+        display: grid;
+        gap: clamp(34px, 7vw, 96px);
+        grid-template-columns: minmax(0, 0.74fr) minmax(420px, 0.9fr);
+        margin: 0 auto;
+        max-width: 1480px;
+        min-height: calc(100svh - 222px);
+        position: relative;
+        z-index: 1;
+      }
+
+      .label {
+        align-items: center;
+        display: inline-flex;
+        font-size: 9px;
+        font-weight: 800;
+        gap: 7px;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .label::before {
+        color: var(--faint);
+        content: "[";
+      }
+
+      .label::after {
+        color: var(--faint);
+        content: "]";
+      }
+
+      h1,
+      h2 {
+        font-family: var(--display);
+        font-weight: 500;
+        letter-spacing: 0;
+      }
+
+      h1 {
+        font-size: clamp(52px, 9vw, 126px);
+        line-height: 0.92;
+        margin-top: 18px;
+        max-width: 760px;
+      }
+
+      .lede {
+        color: rgba(249, 249, 249, 0.78);
+        font-size: 16px;
+        line-height: 1.5;
+        margin-top: 28px;
+        max-width: 520px;
+      }
+
+      .button {
+        align-items: center;
+        background: var(--paper);
+        color: var(--black);
+        display: inline-flex;
+        font-size: 10px;
+        font-weight: 800;
+        gap: 10px;
+        justify-content: center;
+        line-height: 1;
+        margin-top: 28px;
+        min-height: 38px;
+        padding: 0 16px;
+        text-transform: uppercase;
+      }
+
+      .button::after {
+        content: "->";
+      }
+
+      .partner-panel {
+        background: rgba(249, 249, 249, 0.94);
+        color: var(--black);
+        padding: clamp(26px, 3.5vw, 46px);
+      }
+
+      .partner-panel h2 {
+        font-size: clamp(32px, 4vw, 56px);
+        line-height: 0.96;
+        margin-bottom: 10px;
+      }
+
+      .partner-panel > p {
+        color: var(--muted);
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 1.45;
+        margin-bottom: 26px;
+        max-width: 520px;
+      }
+
+      .pathway {
+        border-top: 1px solid var(--line);
+        display: grid;
+        gap: 22px;
+        grid-template-columns: 58px minmax(0, 1fr);
+        padding: 22px 0;
+      }
+
+      .pathway:last-child {
+        border-bottom: 1px solid var(--line);
+      }
+
+      .pathway-number {
+        color: var(--black);
+        font-family: var(--display);
+        font-size: 52px;
+        font-weight: 800;
+        line-height: 0.88;
+      }
+
+      .pathway strong {
+        display: block;
+        font-family: var(--display);
+        font-size: 22px;
+        font-weight: 800;
+        line-height: 1;
+      }
+
+      .pathway span {
+        color: var(--muted);
+        display: block;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1.4;
+        margin-top: 8px;
+      }
+
+      @media (max-width: 980px) {
+        .partner-inner {
+          grid-template-columns: 1fr;
+        }
+
+        .partner-hero {
+          padding-top: 130px;
+        }
+      }
+
+      @media (max-width: 620px) {
+        :root {
+          --side: 18px;
+        }
+
+        .site-header {
+          align-items: flex-start;
+          gap: 18px;
+        }
+
+        .header-links {
+          align-items: flex-end;
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        h1 {
+          font-size: 46px;
+        }
+
+        .partner-panel h2 {
+          font-size: 32px;
+        }
+
+        .pathway {
+          gap: 16px;
+          grid-template-columns: 46px minmax(0, 1fr);
+        }
+
+        .pathway-number {
+          font-size: 42px;
+        }
+
+        .pathway strong {
+          font-size: 19px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="page-shell">
+      <header class="site-header" aria-label="Site header">
+        <a class="logo-brand" href="hoho.html" aria-label="Vertical Tampa CDC home">
+          <img src="images/vertical-tampa/vertical-tampa-logo.png" alt="Vertical Tampa" />
+        </a>
+        <nav class="header-links" aria-label="Page navigation">
+          <a href="contact.html">Contact</a>
+          <a href="hoho.html#get-started">Back to Site</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="partner-hero" aria-labelledby="partner-title">
+          <div class="partner-inner">
+            <div>
+              <span class="label">Partner With Us</span>
+              <h1 id="partner-title">Build the work with us.</h1>
+              <p class="lede">
+                Multiple pathways for collaboration with Vertical Tampa CDC help turn aligned resources into stable
+                homes, stronger neighborhoods, and practical development momentum.
+              </p>
+              <a class="button" href="contact.html">Start a Partnership</a>
+            </div>
+
+            <aside class="partner-panel" aria-label="Partnership pathways">
+              <h2>Partner With Us</h2>
+              <p>Multiple pathways for collaboration with Vertical Tampa CDC:</p>
+
+              <div class="pathway">
+                <div class="pathway-number">1</div>
+                <div>
+                  <strong>Land Partnerships</strong>
+                  <span>Strategic site access to viable development sites.</span>
+                </div>
+              </div>
+
+              <div class="pathway">
+                <div class="pathway-number">2</div>
+                <div>
+                  <strong>Capital Partnerships</strong>
+                  <span>Mission-aligned investment in housing solutions.</span>
+                </div>
+              </div>
+
+              <div class="pathway">
+                <div class="pathway-number">3</div>
+                <div>
+                  <strong>Development Collaborations</strong>
+                  <span>Co-develop with our experienced team.</span>
+                </div>
+              </div>
+
+              <div class="pathway">
+                <div class="pathway-number">4</div>
+                <div>
+                  <strong>Community Alliances</strong>
+                  <span>Amplify neighborhood impact together.</span>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
