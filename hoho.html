@@ -359,6 +359,33 @@
         max-width: 860px;
       }
 
+      .hero-lockup {
+        display: inline-grid;
+        gap: 6px;
+        margin-bottom: 16px;
+        max-width: 230px;
+      }
+
+      .hero-lockup img {
+        height: auto;
+        max-width: min(190px, 52vw);
+        width: 100%;
+      }
+
+      .hero-lockup span {
+        color: rgba(249, 249, 249, 0.88);
+        display: block;
+        font-family: var(--display);
+        font-size: clamp(9px, 0.78vw, 11px);
+        font-weight: 800;
+        line-height: 1.05;
+        text-transform: uppercase;
+      }
+
+      .hero-lockup + h1 {
+        margin-top: 0;
+      }
+
       h1,
       h2,
       h3,
@@ -401,25 +428,27 @@
         display: grid;
         gap: clamp(20px, 4vw, 70px);
         grid-template-columns: minmax(0, 1fr) minmax(260px, 420px) minmax(210px, 270px);
-        margin-top: 76px;
+        margin-top: 54px;
       }
 
       .update-card {
         align-self: end;
-        background: var(--orange);
-        color: var(--black);
-        min-height: 146px;
-        padding: 24px;
+        background: rgba(249, 249, 249, 0.1);
+        border: 1px solid var(--line-dark);
+        color: var(--white);
+        min-height: 124px;
+        padding: 20px;
+        backdrop-filter: blur(12px);
       }
 
       .update-card .label {
-        margin-bottom: 24px;
+        margin-bottom: 16px;
       }
 
       .update-title {
         display: block;
-        font-size: 26px;
-        line-height: 1.04;
+        font-size: 20px;
+        line-height: 1.08;
         max-width: 310px;
       }
 
@@ -444,7 +473,7 @@
       }
 
       .hero-aside p {
-        color: rgba(249, 249, 249, 0.84);
+        color: rgba(249, 249, 249, 0.74);
         font-size: 13px;
         margin: 16px 0 20px;
         max-width: 250px;
@@ -1643,7 +1672,7 @@
         }
 
         .update-title {
-          font-size: 24px;
+          font-size: 20px;
         }
 
         .about-copy h2 {
@@ -1797,7 +1826,7 @@
         }
 
         .update-title {
-          font-size: 21px;
+          font-size: 18px;
         }
 
         .stat strong {
@@ -2002,7 +2031,10 @@
         <section class="hero" id="top" aria-labelledby="hero-title">
           <div class="hero-inner">
             <div class="hero-main">
-              <span class="label">// Vertical Tampa Community Development Corporation</span>
+              <div class="hero-lockup" aria-label="Vertical Tampa Community Development Corporation">
+                <img src="images/vertical-tampa/vertical-tampa-logo.png" alt="Vertical Tampa" />
+                <span>Community Development Corporation</span>
+              </div>
               <h1 id="hero-title">Building Homes. Restoring Hope. Transforming Communities Nationwide.</h1>
             </div>
 

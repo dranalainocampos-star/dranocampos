@@ -317,6 +317,33 @@
         padding-top: 130px;
       }
 
+      .hero-lockup {
+        display: inline-grid;
+        gap: 6px;
+        margin-bottom: 16px;
+        max-width: 240px;
+      }
+
+      .hero-lockup img {
+        height: auto;
+        max-width: min(200px, 52vw);
+        width: 100%;
+      }
+
+      .hero-lockup span {
+        color: rgba(249, 249, 249, 0.9);
+        display: block;
+        font-family: var(--display);
+        font-size: clamp(9px, 0.78vw, 11px);
+        font-weight: 800;
+        line-height: 1.05;
+        text-transform: uppercase;
+      }
+
+      .hero-lockup + h1 {
+        margin-top: 0;
+      }
+
       h1,
       h2,
       h3,
@@ -355,13 +382,13 @@
       .hero-side {
         align-self: end;
         display: grid;
-        gap: 22px;
+        gap: 18px;
         padding-bottom: 48px;
       }
 
       .hero-side p {
-        color: rgba(249, 249, 249, 0.82);
-        font-size: 18px;
+        color: rgba(249, 249, 249, 0.74);
+        font-size: 16px;
         font-weight: 500;
         line-height: 1.32;
       }
@@ -380,7 +407,7 @@
       }
 
       .hero-bottom span {
-        color: rgba(249, 249, 249, 0.72);
+        color: rgba(249, 249, 249, 0.58);
         font-size: 12px;
         font-weight: 700;
       }
@@ -478,6 +505,10 @@
         height: 100%;
         object-fit: cover;
         width: 100%;
+      }
+
+      .gallery-card:first-child img {
+        object-position: center 58%;
       }
 
       .stats-grid {
@@ -736,6 +767,10 @@
         height: 100%;
         object-fit: cover;
         width: 100%;
+      }
+
+      .story-card:first-child .story-image img {
+        object-position: center 58%;
       }
 
       .story-card > div:last-child {
@@ -1515,7 +1550,10 @@
 
         <div class="hero-grid">
           <div class="hero-copy reveal">
-            <span class="label">Vertical Tampa Community Development Corporation</span>
+            <div class="hero-lockup" aria-label="Vertical Tampa Community Development Corporation">
+              <img src="images/vertical-tampa/vertical-tampa-logo.png" alt="Vertical Tampa" />
+              <span>Community Development Corporation</span>
+            </div>
             <h1>Building Homes. Restoring Hope. Transforming Communities Nationwide.</h1>
           </div>
 
@@ -1574,14 +1612,14 @@
             <div class="about-gallery" aria-label="Community portrait gallery">
               <div class="gallery-card">
                 <img
-                  src="https://images.unsplash.com/photo-1758957851828-5179f0e06985?auto=format&fit=crop&w=700&q=85"
-                  alt="Families outside a modern residential community"
+                  src="https://images.unsplash.com/photo-1687563100687-3ff259dc58cc?auto=format&fit=crop&w=700&q=85"
+                  alt="People gathered in prayer and community support"
                 />
               </div>
               <div class="gallery-card">
                 <img
-                  src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=700&q=85"
-                  alt="Single family home in a neighborhood"
+                  src="https://images.unsplash.com/photo-1781332383787-5fd0434e6ff2?auto=format&fit=crop&w=700&q=85"
+                  alt="Historic homes with people gathered in a neighborhood park"
                 />
               </div>
               <div class="gallery-card">
@@ -1635,8 +1673,8 @@
                 <span class="label">Mission</span>
                 <div class="story-image">
                   <img
-                    src="https://images.unsplash.com/photo-1758957851828-5179f0e06985?auto=format&fit=crop&w=900&q=85"
-                    alt="Families outside a modern residential community"
+                    src="https://images.unsplash.com/photo-1687563100687-3ff259dc58cc?auto=format&fit=crop&w=900&q=85"
+                    alt="People gathered in prayer and community support"
                   />
                 </div>
                 <div>
@@ -1651,8 +1689,8 @@
                 <span class="label">Foundation</span>
                 <div class="story-image">
                   <img
-                    src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=900&q=85"
-                    alt="Single family home in a residential neighborhood"
+                    src="https://images.unsplash.com/photo-1781332383787-5fd0434e6ff2?auto=format&fit=crop&w=900&q=85"
+                    alt="Historic homes with people gathered in a neighborhood park"
                   />
                 </div>
                 <div>
