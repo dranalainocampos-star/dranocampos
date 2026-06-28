@@ -806,6 +806,56 @@
         margin-bottom: 0.25rem;
       }
 
+      #contact {
+        background:
+          linear-gradient(90deg, rgba(44, 44, 44, 0.9), rgba(44, 44, 44, 0.72)),
+          url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1600&q=85")
+            center / cover;
+        border-top: 0;
+        color: var(--white);
+      }
+
+      #contact .badge.dark,
+      #contact p {
+        color: rgba(249, 249, 249, 0.74);
+      }
+
+      #contact h2 {
+        color: var(--white);
+      }
+
+      #contact .contact-line {
+        background: rgba(249, 249, 249, 0.08);
+        border-color: rgba(249, 249, 249, 0.18);
+        color: var(--white);
+        backdrop-filter: blur(10px);
+      }
+
+      #contact .contact-line p,
+      #contact .contact-line a {
+        color: rgba(249, 249, 249, 0.72);
+      }
+
+      #contact .button-dark {
+        background: var(--white);
+        color: var(--black);
+      }
+
+      #contact .button-dark:hover {
+        background: var(--accent);
+      }
+
+      #contact .button-light {
+        background: rgba(249, 249, 249, 0.08);
+        border: 1px solid rgba(249, 249, 249, 0.18);
+        color: var(--white);
+      }
+
+      #contact .button-light:hover {
+        background: var(--white);
+        color: var(--black);
+      }
+
       .case-band {
         background: var(--black);
         padding: 6rem var(--side);
@@ -1008,27 +1058,6 @@
         outline: 0;
       }
 
-      .cta {
-        background:
-          linear-gradient(90deg, rgba(44, 44, 44, 0.76), rgba(44, 44, 44, 0.2)),
-          url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1600&q=85")
-            center / cover;
-        border-radius: var(--radius);
-        color: var(--white);
-        margin-top: 1rem;
-        min-height: 470px;
-        padding: 5rem var(--side);
-      }
-
-      .cta-inner {
-        max-width: 620px;
-      }
-
-      .cta p {
-        color: rgba(249, 249, 249, 0.76);
-        margin: 1rem 0 1.4rem;
-      }
-
       .footer {
         color: var(--white);
         padding: 4rem var(--side) 2rem;
@@ -1202,7 +1231,6 @@
         .hero-content,
         .intro-inner,
         .section-inner,
-        .cta-inner,
         .footer-grid,
         .footer-bottom {
           margin-left: auto;
@@ -1242,7 +1270,6 @@
         .intro,
         .section,
         .case-band,
-        .cta,
         .footer {
           padding-left: 1rem;
           padding-right: 1rem;
@@ -1310,16 +1337,14 @@
               </a>
 
               <nav class="site-nav" id="site-nav" aria-label="Main Navigation" data-menu>
-                <a href="#top">Overview</a>
                 <a href="#about">Who We Are</a>
                 <a href="#problem">The Problem</a>
                 <a href="#capacity">Capacity</a>
                 <a href="#leadership">Leadership</a>
-                <a href="#contact">Contact</a>
               </nav>
 
               <div class="nav-actions">
-                <a class="button button-primary" href="partner-with-us.html">Partner With Us</a>
+                <a class="button button-primary" href="contact.html">Contact Us</a>
               </div>
 
               <button
@@ -1425,7 +1450,6 @@
                     People-first outcomes measured through stable homes and stronger families
                   </div>
                 </div>
-                <a class="button button-dark" href="#problem">See The Problem</a>
               </div>
             </div>
           </section>
@@ -1530,60 +1554,17 @@
           </section>
         </div>
 
-        <section class="case-band reveal" id="leadership">
-          <div class="case-grid">
-            <article class="case-copy">
-              <div class="brand-small">
-                <i class="fa-solid fa-user-shield"></i>
-                Vertical Tampa CDC
-              </div>
-              <div>
+        <div class="surface">
+          <section class="section reveal" id="leadership">
+            <div class="section-inner">
+              <div class="section-head center">
                 <span class="badge dark">Leadership & Board</span>
                 <h2>The people behind the work</h2>
                 <p>
-                  The mission is carried by leaders who understand community service, real
-                  estate development, legal advocacy, and affordable housing construction.
+                  Vertical Tampa CDC is guided by leaders who bring ministry vision, real
+                  estate law, construction oversight, and practical development experience
+                  into one build-ready housing mission.
                 </p>
-              </div>
-              <div>
-                <div class="case-items">
-                  <div class="case-item">
-                    <i class="fa-solid fa-cross"></i>
-                    <strong>Mission Vision</strong>
-                    <p>Faith-led service with strategic partnership experience.</p>
-                  </div>
-                  <div class="case-item">
-                    <i class="fa-solid fa-scale-balanced"></i>
-                    <strong>Legal & Build Oversight</strong>
-                    <p>Real estate law, compliance, and construction capability.</p>
-                  </div>
-                </div>
-                <div class="result-strip">
-                  <div>
-                    <span>Focus</span>
-                    <strong>3</strong>
-                    <p>Leadership disciplines aligned around mission, law, and development.</p>
-                  </div>
-                  <a class="button button-dark" href="#contact">Contact Us</a>
-                </div>
-              </div>
-            </article>
-
-            <div class="case-photo">
-              <img
-                src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1100&q=85"
-                alt="Architectural planning documents for housing development"
-              />
-            </div>
-          </div>
-        </section>
-
-        <div class="surface">
-          <section class="section reveal">
-            <div class="section-inner">
-              <div class="section-head center">
-                <span class="badge dark">Board Profiles</span>
-                <h2>Experienced leadership across ministry, law, and construction</h2>
               </div>
               <div class="leader-grid">
                 <article class="leader-card">
@@ -1627,11 +1608,12 @@
             <div class="section-inner split">
               <div class="copy-stack">
                 <span class="badge dark">Get Started</span>
-                <h2>Partner with Vertical Tampa CDC.</h2>
+                <h2>Stable homes. Stronger families. Build-ready community impact.</h2>
                 <p>
                   If you have land, capital, development alignment, or a community partnership
                   that can help build stronger neighborhoods, partner with us to move practical
-                  housing solutions toward build-ready execution.
+                  housing solutions toward build-ready execution through land, capital,
+                  development collaboration, and community alliances.
                 </p>
                 <div class="hero-actions">
                   <a class="button button-dark" href="partner-with-us.html">Partner With Us</a>
@@ -1656,17 +1638,6 @@
           </section>
         </div>
 
-        <section class="cta reveal">
-          <div class="cta-inner">
-            <span class="badge">Partner With Us</span>
-            <h2>Stable homes. Stronger families. Build-ready community impact.</h2>
-            <p>
-              Explore partnership pathways for land, capital, development collaboration,
-              and community alliances.
-            </p>
-            <a class="button button-light" href="partner-with-us.html">Partner With Us</a>
-          </div>
-        </section>
       </main>
 
       <footer class="footer">
