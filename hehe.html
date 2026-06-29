@@ -73,8 +73,7 @@
         -webkit-font-smoothing: antialiased;
       }
 
-      body,
-      .page {
+      body {
         max-width: 100%;
         overflow-x: hidden;
       }
@@ -272,6 +271,7 @@
       }
 
       .hero {
+        --hero-side: max(var(--side), calc((100vw - 1460px) / 2 + var(--side)));
         background:
           linear-gradient(90deg, rgba(44, 44, 44, 0.38), rgba(44, 44, 44, 0.03)),
           url("https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1800&q=85")
@@ -284,7 +284,7 @@
         margin: -1rem calc(50% - 50vw) 0;
         min-height: 760px;
         overflow: hidden;
-        padding: 1.2rem var(--side) 2rem;
+        padding: 1.2rem var(--hero-side) 2rem;
         position: relative;
         width: 100vw;
       }
@@ -434,7 +434,7 @@
         max-width: 330px;
         padding: 0.75rem;
         position: absolute;
-        right: var(--side);
+        right: var(--hero-side);
         z-index: 1;
         backdrop-filter: blur(14px);
       }
@@ -1217,6 +1217,7 @@
         }
 
         .hero {
+          --hero-side: 1rem;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
