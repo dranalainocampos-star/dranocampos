@@ -45,7 +45,9 @@
         --badge: "Anonymous Pro", monospace;
         --radius: 6px;
         --side: 2rem;
+        --page-max: 1460px;
         --container: 1200px;
+        --section-side: max(var(--side), calc((100vw - var(--page-max)) / 2 + var(--side)));
       }
 
       * {
@@ -128,7 +130,7 @@
       .page {
         background: var(--black);
         margin: 0 auto;
-        max-width: 1460px;
+        max-width: var(--page-max);
         padding: 1rem;
         width: 100%;
       }
@@ -271,7 +273,6 @@
       }
 
       .hero {
-        --hero-side: max(var(--side), calc((100vw - 1460px) / 2 + var(--side)));
         background:
           linear-gradient(90deg, rgba(44, 44, 44, 0.38), rgba(44, 44, 44, 0.03)),
           url("https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1800&q=85")
@@ -284,7 +285,7 @@
         margin: -1rem calc(50% - 50vw) 0;
         min-height: 760px;
         overflow: hidden;
-        padding: 1.2rem var(--hero-side) 2rem;
+        padding: 1.2rem var(--section-side) 2rem;
         position: relative;
         width: 100vw;
       }
@@ -434,7 +435,7 @@
         max-width: 330px;
         padding: 0.75rem;
         position: absolute;
-        right: var(--hero-side);
+        right: var(--section-side);
         z-index: 1;
         backdrop-filter: blur(14px);
       }
@@ -456,8 +457,11 @@
 
       .intro {
         color: var(--white);
-        padding: 4.5rem var(--side);
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
+        padding: 4.5rem var(--section-side);
         text-align: center;
+        width: 100vw;
       }
 
       .intro-inner {
@@ -529,12 +533,15 @@
 
       .surface {
         background: var(--cream);
-        border-radius: var(--radius);
+        border-radius: 0;
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
         overflow: hidden;
+        width: 100vw;
       }
 
       .section {
-        padding: 6rem var(--side);
+        padding: 6rem var(--section-side);
       }
 
       .section + .section {
@@ -1062,7 +1069,10 @@
 
       .footer {
         color: var(--white);
-        padding: 4rem var(--side) 2rem;
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
+        padding: 4rem var(--section-side) 2rem;
+        width: 100vw;
       }
 
       .footer-grid {
@@ -1217,7 +1227,6 @@
         }
 
         .hero {
-          --hero-side: 1rem;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
